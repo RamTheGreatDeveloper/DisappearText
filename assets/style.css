@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    font-size: 12vw;
+    font-weight: 600;
+    overflow: hidden;
+}
+.disappear{
+    display: flex;
+   
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    width: 100%;
+    height: fit-content;
+}
+.disappear span{
+    color: transparent;
+    animation: 3s infinite;
+    display: inline-block;
+    text-shadow: 0px 0px 0px black;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+   
+}
+.disappear span:nth-child(1){
+    animation-name: disappearleft;
+    
+}
+.disappear span:nth-child(2){
+    animation-name: disappearleft;
+    animation-iteration-count: .3s;
+}
+.disappear span:nth-child(3){
+    animation-name: disappearright;
+    animation-iteration-count: .6s;
+}
+.disappear span:nth-child(4){
+    animation-name: disappearleft;
+    animation-iteration-count: .8s;
+}
+.disappear span:nth-child(5){
+    animation-name: disappearright;
+    animation-iteration-count: 1s;
+}
+.disappear span:nth-child(6){
+    animation-name: disappearright;
+    animation-iteration-count: 1.3s;
+}
+.disappear span:nth-child(7){
+    animation-name: disappearleft;
+    animation-iteration-count: 1.6s;
+}
+.disappear span:nth-child(8){
+    animation-name: disappearright;
+    animation-iteration-count: 2s;
+}
+.disappear span:nth-last-child(1){
+    animation-name: disappearright;
+    animation-iteration-count: 2.3s;
+}
+@keyframes disappearleft {
+    50%{
+        transform: skew(50deg) translateY(-200%) ;
+        text-shadow: 0px 0px  50px;
+        opacity: 0;
+    }
+}
+@keyframes disappearright {
+    50%{
+        transform: skew(-50deg) translateY(-200%) ;
+        text-shadow: 0px 0px  50px;
+        opacity: 0;
+    }
+}
